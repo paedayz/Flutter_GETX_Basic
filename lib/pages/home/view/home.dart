@@ -24,21 +24,29 @@ class HomeScreen extends StatelessWidget {
             ),
             FlatButton(
               onPressed: () {
-                homeController.increment();
+                // homeController.increment();
+                Get.defaultDialog(
+                    title: "Getx Dialog", middleText: "Hello world");
               },
-              child: Text('Increment'),
+              child: Text('Dailog'),
               color: Colors.black,
               textColor: Colors.white,
             ),
             FlatButton(
               onPressed: () {
+                // Get.defaultDialog(title: "This is dialog");
+                Get.snackbar(
+                  "Title",
+                  "This is getx snackbar",
+                  snackPosition: SnackPosition.TOP,
+                );
                 // homeController.increment();
                 // print(apiService.fetchTextFromApi());
-                Get.toNamed('/detail');
+                // Get.toNamed('/detail');
                 // Get.to(DetailScreen());
                 // Get.off(DetailScreen());
               },
-              child: Text('Go to Detail'),
+              child: Text('Snack Bar'),
               color: Colors.red,
               textColor: Colors.white,
             )
