@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getx_1/pages/detail/view/detail.dart';
+import 'package:getx_1/pages/services/api_service.dart';
 
 class HomeScreen extends StatelessWidget {
+  final apiService = Get.put(ApiService());
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -20,7 +22,8 @@ class HomeScreen extends StatelessWidget {
             ),
             FlatButton(
               onPressed: () {
-                Get.toNamed('/detail');
+                print(apiService.fetchTextFromApi());
+                // Get.toNamed('/detail');
                 // Get.to(DetailScreen());
                 // Get.off(DetailScreen());
               },
