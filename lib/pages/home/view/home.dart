@@ -22,8 +22,8 @@ class HomeScreen extends StatelessWidget {
             ),
             FlatButton(
               onPressed: () {
-                print(apiService.fetchTextFromApi());
-                // Get.toNamed('/detail');
+                // print(apiService.fetchTextFromApi());
+                Get.toNamed('/detail');
                 // Get.to(DetailScreen());
                 // Get.off(DetailScreen());
               },
