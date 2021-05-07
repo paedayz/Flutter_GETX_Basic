@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_1/pages/detail/binding/detail_binding.dart';
 import 'package:getx_1/pages/detail/view/detail.dart';
+import 'package:getx_1/pages/home/binding/home_binding.dart';
 import './pages/home/view/home.dart';
 
 void main() {
@@ -18,8 +20,17 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       getPages: [
-        GetPage(name: '/home', page: () => HomeScreen()),
-        GetPage(name: '/detail', page: () => DetailScreen()),
+        GetPage(
+          name: '/home',
+          page: () => HomeScreen(),
+          // binding: HomeBinding(),
+          bindings: [HomeBinding(), DetailBinding()],
+        ),
+        GetPage(
+          name: '/detail',
+          page: () => DetailScreen(),
+          binding: DetailBinding(),
+        ),
       ],
       initialRoute: '/home',
     );

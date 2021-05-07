@@ -1,11 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_1/pages/home/controller/home_controller.dart';
-import 'package:getx_1/pages/services/api_service.dart';
 
 class HomeScreen extends StatelessWidget {
-  final apiService = Get.put(ApiService());
-  final homeController = Get.put(HomeController());
+  final homeController = Get.find<HomeController>();
 
   @override
   Widget build(BuildContext context) {
@@ -27,13 +25,21 @@ class HomeScreen extends StatelessWidget {
             FlatButton(
               onPressed: () {
                 homeController.increment();
+              },
+              child: Text('Increment'),
+              color: Colors.black,
+              textColor: Colors.white,
+            ),
+            FlatButton(
+              onPressed: () {
+                // homeController.increment();
                 // print(apiService.fetchTextFromApi());
-                // Get.toNamed('/detail');
+                Get.toNamed('/detail');
                 // Get.to(DetailScreen());
                 // Get.off(DetailScreen());
               },
               child: Text('Go to Detail'),
-              color: Colors.black,
+              color: Colors.red,
               textColor: Colors.white,
             )
           ],
