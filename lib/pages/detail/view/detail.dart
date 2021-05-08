@@ -15,10 +15,25 @@ class DetailScreen extends StatelessWidget {
         leading: IconButton(
           icon: Icon(Icons.arrow_back),
           onPressed: () {
-            print(homeController.count);
+            // print(homeController.count);
             // print(apiService.fetchTextFromApi());
-            // Get.back();
+            Get.back();
           },
+        ),
+      ),
+      body: Container(
+        width: double.infinity,
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            Text(
+              '${homeController.count}',
+              style: TextStyle(
+                fontSize: 24,
+              ),
+            )
+          ],
         ),
       ),
     );

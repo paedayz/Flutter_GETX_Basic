@@ -51,6 +51,14 @@ class HomeScreen extends StatelessWidget {
             ),
             FlatButton(
               onPressed: () {
+                Get.toNamed('/detail');
+              },
+              child: Text('Go to Detail'),
+              color: Colors.purple,
+              textColor: Colors.white,
+            ),
+            FlatButton(
+              onPressed: () {
                 // homeController.increment();
                 Get.defaultDialog(
                     title: "Getx Dialog", middleText: "Hello world");
