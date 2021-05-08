@@ -32,11 +32,22 @@ class HomeScreen extends StatelessWidget {
             ),
             FlatButton(
               onPressed: () {
+                homeController.decrement();
+              },
+              child: Text('decrease'),
+              color: Colors.red[200],
+              textColor: Colors.white,
+            ),
+            FlatButton(
+              onPressed: () {
                 homeController.reset();
               },
               child: Text('Reset'),
-              color: Colors.red[100],
-              textColor: Colors.black,
+              color: Colors.black,
+              textColor: Colors.white,
+            ),
+            SizedBox(
+              height: 40,
             ),
             FlatButton(
               onPressed: () {
@@ -45,8 +56,8 @@ class HomeScreen extends StatelessWidget {
                     title: "Getx Dialog", middleText: "Hello world");
               },
               child: Text('Dailog'),
-              color: Colors.black,
-              textColor: Colors.white,
+              color: Colors.yellow,
+              textColor: Colors.black,
             ),
             FlatButton(
               onPressed: () {
