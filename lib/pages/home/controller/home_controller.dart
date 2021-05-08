@@ -6,4 +6,8 @@ class HomeController extends GetxController {
   increment() {
     count++;
   }
+
+  reset() {
+    count.value = 0;
+  }
 }

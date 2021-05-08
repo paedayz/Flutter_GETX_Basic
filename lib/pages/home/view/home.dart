@@ -24,6 +24,22 @@ class HomeScreen extends StatelessWidget {
             ),
             FlatButton(
               onPressed: () {
+                homeController.increment();
+              },
+              child: Text('increase'),
+              color: Colors.green[200],
+              textColor: Colors.white,
+            ),
+            FlatButton(
+              onPressed: () {
+                homeController.reset();
+              },
+              child: Text('Reset'),
+              color: Colors.red[100],
+              textColor: Colors.black,
+            ),
+            FlatButton(
+              onPressed: () {
                 // homeController.increment();
                 Get.defaultDialog(
                     title: "Getx Dialog", middleText: "Hello world");
@@ -34,12 +50,6 @@ class HomeScreen extends StatelessWidget {
             ),
             FlatButton(
               onPressed: () {
-                // Get.defaultDialog(title: "This is dialog");
-                Get.bottomSheet(Container(
-                  height: 100,
-                  color: Colors.white,
-                  child: Text('Getx Bottom Sheet'),
-                ));
                 Get.snackbar(
                   "Title",
                   "This is getx snackbar",
