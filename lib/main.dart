@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:getx_1/pages/detail/binding/detail_binding.dart';
 import 'package:getx_1/pages/detail/view/detail.dart';
 import 'package:getx_1/pages/home/binding/home_binding.dart';
-import './pages/home/view/home.dart';
+import './core.dart';
 
 void main() {
   runApp(MyApp());
@@ -21,8 +21,8 @@ class MyApp extends StatelessWidget {
       ),
       getPages: [
         GetPage(
-          name: '/home',
-          page: () => HomeScreen(),
+          name: '/',
+          page: () => Core(),
           // binding: HomeBinding(),
           bindings: [HomeBinding(), DetailBinding()],
         ),
